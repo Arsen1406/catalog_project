@@ -1,0 +1,133 @@
+<body>
+    <header class="header">
+     <div class="logo"><img src="images.jpg">
+     <a href="#"><img src="img/logo.png" alt=""></a>
+     </div>
+     <nav class="menu">
+      <ul>
+       <li>
+        <a href="#">МЕНЮ</a>
+        <ul>
+            <div class="doubleMenu">
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Франшиза</a></li>
+            </div>
+        </ul>
+        </li>
+       <li><a href="#">ПОРТФОЛИО</a></li>
+       <li><a href="#">ЦЕНЫ</a></li>
+       <li><a href="#">СХЕМА РАБОТЫ</a></li>
+       <li><a href="#">ОТЗЫВЫ</a></li>
+       <li><a href="#">КОНТАКТЫ</a></li>
+       <li><a href="#">ГАРАНТИЯ</a></li>
+      </ul>
+     </nav>
+     <div class="getCall">
+        <button class="textButton">ОБРАТНЫЙ ЗВОНОК</button>
+     </div>
+    </header>
+  </body>
+
+
+<style>
+*{
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ background-color: #fff;
+ font-family: "Open Sans", sans serif;
+ line-height: 1.5;
+}
+
+
+.header {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.header .logo {
+ padding-left: 30px;
+}
+
+.header .menu ul {
+ display: flex;
+ list-style: none;
+}
+
+.header .menu ul li {
+ margin: 20px 10px;
+}
+
+.header .menu ul a {
+ text-transform: uppercase;
+ text-decoration: none;
+ font-weight: bold;
+ color: #ffffff;
+}
+
+.header .menu ul ul {
+    display: none;
+    position: absolute; 
+}
+.header .menu ul li:hover > ul {
+    display: inherit;
+}
+			
+.header .menu ul ul div li {
+    min-width: 170px;
+    margin-left: 20px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+.header .menu ul ul li a {
+    color: #5233b7;
+}
+
+.doubleMenu{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.getCall {
+ font-size: 110%;
+ margin-right: 10px;
+ display: i;
+ color: #ffffff;
+}
+.buttons-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background: #302594;
+  padding: .375em 1.125em;
+  margin-left: 20px;
+  font-size: 1rem;
+  border-color: #302594;
+}
+
+button:active {
+  background: #302594;
+}
+
+button:hover {
+  background: #3325ac;
+}
+
+.textButton{
+    color: #ffffff;
+    border-radius: 4px;
+}
+</style>

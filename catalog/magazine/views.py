@@ -1,9 +1,12 @@
-import requests as req
+import requests
 from django.shortcuts import render
 
 from .form import ArticleForm
 
-API_SERVISE = 'https://api.forum-auto.ru/v2/listGoods?login=493358_stroyzar&pass=sAVDkrEbqd&art={}'
+API_SERVICE = (
+    'https://api.forum-auto.ru/v2/listGoods?'
+    'login=493358_stroyzar&pass=sAVDkrEbqd&art={}'
+)
 
 
 def index(request):
@@ -16,9 +19,14 @@ def index(request):
 
 def detail_product(request):
     article = request.GET
-    product_data = req.get(API_SERVISE.format(article.get('article'))).json()
+    product_data = requests.get(
+        API_SERVICE.format(article.get('article'))).json()
     context = {
         'product_data': product_data
     }
     template = 'product_detail.html'
     return render(request, template, context)
+
+
+def demo_page(request):
+    return render(request, 'demo.html')

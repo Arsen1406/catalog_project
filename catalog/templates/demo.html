@@ -1,0 +1,34 @@
+{% load static %}
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+<body>
+  <link rel="stylesheet" href="">
+  {% include "includes/header.html" %}
+  <main>
+    <div class="mainCont">
+        <h1>
+            Ремонт под ключ от 2900 руб.м².
+        </h1>
+    </div>
+  </main>
+</body>
+
+
+<style>
+    body{
+        background: linear-gradient(45deg, #5233b7, #a75acc);
+    }
+    h1{
+        color: aliceblue;
+        max-width: 40%;
+        font-size: 50px;
+    }
+    .mainCont{
+        max-height: 15%;
+        margin-top: 10%;
+        margin-left: 20%;
+        display: flex;
+    }
+    
+</style>

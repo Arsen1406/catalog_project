@@ -1,0 +1,22 @@
+{% load static %}
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+<body>
+  <link rel="stylesheet" href="">
+  {% include "includes/header.html" %}
+  <main>
+      {% block content %}
+      {% endblock %}
+  </main>
+</body>
+
+
+<style>
+    h1 {
+        color: aliceblue;
+    }
+    body{
+        background: linear-gradient(45deg, #5233b7, #a75acc);
+    }
+</style>
