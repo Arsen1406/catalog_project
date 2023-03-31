@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Детальная информация о товаре</title>
+</head>
+<body>
+{% for product in product_data %}
+<h3>Информация о товаре - {{ product.name }}</h3>
+<table>
+  <tr><th>Параметр</th><th>Значение</th></tr>
+  <tr><th class="valueStyle">id:</th><th class="valueStyle">{{ product.gid }}</th></tr>
+  <tr><th class="valueStyle">Бренд:</th><th class="valueStyle">{{ product.brand }}</th></tr>
+  <tr><th class="valueStyle">Артикул:</th><th class="valueStyle">{{ product.art }}</th></tr>
+  <tr><th class="valueStyle">Деталь:</th><th class="valueStyle">{{ product.name }}</th></tr>
+  <tr><th class="valueStyle">d_deliv:</th><th class="valueStyle">{{ product.d_deliv }}</th></tr>
+  <tr><th class="valueStyle">h_deliv:</th><th class="valueStyle">{{ product.h_deliv }}</th></tr>
+  <tr><th class="valueStyle">kr:</th><th class="valueStyle">{{ product.kr }}</th></tr>
+  <tr><th class="valueStyle">Номер:</th><th class="valueStyle">{{ product.num }}</th></tr>
+  <tr><th class="valueStyle">Цена:</th><th class="valueStyle">{{ product.price }}</th></tr>
+  <tr><th class="valueStyle">Склад:</th><th class="valueStyle">{{ product.whse }}</th></tr>
+  <tr><th class="valueStyle">Подлежит ли возрату:</th>
+  <th class="valueStyle">
+    {% if product.is_returnable == 1 %}
+      Да
+    {% else %}
+      Нет
+    {% endif %}
+  </th></tr>
+</table>
+<br><br><br>
+{% endfor %}
+
+</body>
+</html>
+
+
+
+<style>
+
+.valueStyle{
+  font-weight: normal;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+
+  body {
+      margin-left: auto;
+      margin-right: auto;
+      width: 20em;
+      background-color: #fafafa;
+  }
+
+
+</style>

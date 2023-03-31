@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Введите артикул</title>
+</head>
+<body>
+    <h1>Введите артикул</h1>
+         <form id="data" action="detail-info/" method="get">
+            {% for field in form %}
+            {{ field }}
+            {% endfor %}
+        </form>
+    <br>
+<button class="favorite styled" type="submit" form="data">Получить информацию</button>
+</body>
+</html>
+
+
+<style>
+
+    a{
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: blo
+    }
+
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20em;
+        background-color: #fafafa;
+    }
+
+    form input{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .styled {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        border-radius: 10px;
+        background-color: rgb(116, 172, 245);
+        background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    .styled:hover {
+        background-color: rgb(0, 66, 248);
+    }
+
+    .styled:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+    }
+
+</style>
