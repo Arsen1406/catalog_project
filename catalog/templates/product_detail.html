@@ -1,15 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Детальная информация о товаре</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
   {% if product_data.errors == false %}
     {% for product in product_data %}
-      <h3>Информация о товаре - {{ product.name }}</h3>
+      <div style="border: 1px; background-color: rgb(65, 44, 120); border-radius: 5px; padding: 10px;">
+        <h3 style="color: aliceblue;">Информация о товаре - {{ product.name }}</h3>
         <table>
-          <tr><th>Параметр</th><th>Значение</th></tr>
           <tr><th class="valueStyle">id:</th><th class="valueStyle">{{ product.gid }}</th></tr>
           <tr><th class="valueStyle">Бренд:</th><th class="valueStyle">{{ product.brand }}</th></tr>
           <tr><th class="valueStyle">Артикул:</th><th class="valueStyle">{{ product.art }}</th></tr>
@@ -29,6 +32,7 @@
             {% endif %}
           </th></tr>
         </table>
+      </div>
         <br><br><br>
     {% endfor %}
   {% else %}  
@@ -38,7 +42,6 @@
 </html>
 
 
-
 <style>
   .valueStyle{
     font-weight: normal;
@@ -46,6 +49,7 @@
 
   th, td {
     border-bottom: 1px solid #ddd;
+    color: #fafafa;
   }
 
 

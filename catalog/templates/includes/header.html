@@ -6,7 +6,7 @@
      <nav class="menu">
       <ul>
        <li>
-        <a href="#">МЕНЮ</a>
+        <a href="#">Меню</a>
         <ul>
             <div class="doubleMenu">
                 <li><a href="#">Услуги</a></li>
@@ -16,39 +16,37 @@
             </div>
         </ul>
         </li>
-       <li><a href="#">ПОРТФОЛИО</a></li>
-       <li><a href="#">ЦЕНЫ</a></li>
-       <li><a href="#">СХЕМА РАБОТЫ</a></li>
-       <li><a href="#">ОТЗЫВЫ</a></li>
-       <li><a href="#">КОНТАКТЫ</a></li>
-       <li><a href="#">ГАРАНТИЯ</a></li>
+       <li><a href="#">Портфолио</a></li>
+       <li><a href="#">Цены</a></li>
+       <li><a href="#">Схема работы</a></li>
+       <li><a href="#">Отзывы</a></li>
+       <li><a href="#">Контакты</a></li>
+       <li><a href="#">Гарантия</a></li>
       </ul>
      </nav>
-     <div class="getCall">
-        <button class="textButton">ОБРАТНЫЙ ЗВОНОК</button>
-     </div>
+        <button class="textButton">Обратный звонок</button>
     </header>
   </body>
 
 
 <style>
 *{
- margin: 0;
- padding: 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
  background-color: #fff;
- font-family: "Open Sans", sans serif;
  line-height: 1.5;
 }
 
 
 .header {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-between;
- align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .header .logo {
@@ -56,19 +54,18 @@ body {
 }
 
 .header .menu ul {
- display: flex;
- list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .header .menu ul li {
- margin: 20px 10px;
+  margin: 20px 10px;
 }
 
 .header .menu ul a {
- text-transform: uppercase;
- text-decoration: none;
- font-weight: bold;
- color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .header .menu ul ul {
@@ -89,33 +86,23 @@ body {
 
 .header .menu ul ul li a {
     color: #5233b7;
+    margin-left: 20%;
 }
 
 .doubleMenu{
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #fff;
     border-radius: 5px;
 }
 
-.getCall {
- font-size: 110%;
- margin-right: 10px;
- display: i;
- color: #ffffff;
-}
-.buttons-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 button {
   background: #302594;
   padding: .375em 1.125em;
   margin-left: 20px;
   font-size: 1rem;
-  border-color: #302594;
+  text-transform: uppercase;
 }
 
 button:active {
@@ -129,5 +116,7 @@ button:hover {
 .textButton{
     color: #ffffff;
     border-radius: 4px;
+    border: #302594;
 }
+
 </style>

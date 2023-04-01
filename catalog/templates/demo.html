@@ -1,34 +1,152 @@
 {% load static %}
   <head>
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   </head>
 <body>
-  <link rel="stylesheet" href="">
   {% include "includes/header.html" %}
+  <div class="activeElem">
+    <h2>Расчитайте стоимость ремонта</h2>
+    <div class="slidecontainer">
+      <dl class="tabble">
+        <dt>Площадь квартиры:</dt>
+         <dd><p style="margin-left: 150px;"><span id="square"></span>м²</p></dd>
+      </dl>
+      <input type="range" min="15" max="300" value="68" class="slider" id="myRange">
+    </div>
+    
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("square");
+      output.innerHTML = slider.value;
+      
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>
+    <p style="margin-top: 10px;">Тип жилья:</p>
+  <div class="container">
+    <label for="radio-one" class="form-radio-hidden">
+        <input type="radio" name="type" value="Вторичное жилье" id="radio-one" checked>
+        <span class="radio"></span>
+        <span class="text">Вторичное жилье</span>
+    </label>
+    <label for="radio-two" class="form-radio-hidden">
+        <input type="radio" name="type" value="Новостройка" id="radio-two">
+        <span class="radio"></span>
+        <span class="text">Новостройка</span>
+    </label>
+    <label for="radio-three" class="form-radio-hidden">
+        <input type="radio" name="type" value="Офис" id="radio-three">
+        <span class="radio"></span>
+        <span class="text">Офис</span>
+    </label>
+</div>
+<p style="margin-top: 10px;">Кол-во комнат:</p>
+<div class="container">
+  <label for="radio-1" class="form-radio-hidden">
+      <input type="radio" name="room" value="1" id="radio-1" checked>
+      <span class="radio"></span>
+      <span class="text">1</span>
+  </label>
+  <label for="radio-2" class="form-radio-hidden">
+      <input type="radio" name="room" value="2" id="radio-2">
+      <span class="radio"></span>
+      <span class="text">2</span>
+  </label>
+  <label for="radio-3" class="form-radio-hidden">
+      <input type="radio" name="room" value="3+" id="radio-3">
+      <span class="radio"></span>
+      <span class="text">3+</span>
+  </label>
+  <label for="radio-4" class="form-radio-hidden">
+    <input type="radio" name="room" value="Студия" id="radio-4">
+    <span class="radio"></span>
+    <span class="text">Студия</span>
+</label>
+  </div>
+  <button type="submit" >Отправить</button>
+  </div>
   <main>
     <div class="mainCont">
-        <h1>
-            Ремонт под ключ от 2900 руб.м².
-        </h1>
+      <h1>
+          Ремонт под ключ от 2900 руб.м².
+      </h1>
+      <h2 class="litleTitle">
+        При заказе ремонта делаем <span class="decor">дизайн-проект</span> в подарок
+      </h2> 
+      <div class="main-row-block">
+        <div class="advantages">
+          <img class="smallImg" src="{% static 'img/devilery.png' %}">
+          <p class="textAdvent">
+            Бесплатный выезд в день обращения
+          </p>
+        </div>
+          <div class="advantages">
+            <img class="smallImg" src="{% static 'img/garant.png' %}">
+          <p class="textAdvent">
+            Гарантия на работу до 5 лет
+          </p>
+        </div>
+          <div class="advantages">
+            <img class="smallImg" src="{% static 'img/time.png' %}">
+          <p class="textAdvent">
+            Жесткое соблюдение сроков
+          </p>
+        </div>
+      </div>
     </div>
+    <div class="parent"></div>
   </main>
 </body>
 
 
 <style>
-    body{
-        background: linear-gradient(45deg, #5233b7, #a75acc);
+  .activeElem{
+    animation-timing-function: linear;
+      animation-duration: 1s;
+      animation-name: slideinr;
+      }
+  
+    @keyframes slideinr {
+    from {
+      margin-left: 100%;
+      width: 300%;
     }
-    h1{
-        color: aliceblue;
-        max-width: 40%;
-        font-size: 50px;
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
     }
-    .mainCont{
-        max-height: 15%;
-        margin-top: 10%;
-        margin-left: 20%;
-        display: flex;
+  }
+
+  .parent {
+    max-width: 40%;     
+    position: static;      
+    bottom: 0; 
+    margin-left: 60%;               
+    width: 20%;
+    padding: 0;
+    border-radius: 100px 0px 0px 0px;
+    width: 50%;
+    content: url("{% static 'img/rem2.jpg' %}");  
+    display: flex;
+    right: 0;
+    left: inherit;             
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-name: slideinr;
     }
-    
+
+  @keyframes slideinr {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 60%;
+    width: 100%;
+  }
+}
 </style>
