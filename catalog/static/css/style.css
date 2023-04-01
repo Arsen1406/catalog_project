@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap');
+
+    body{
+        background: linear-gradient(45deg, #5233b7, #a75acc);
+        position: sticky;
+    }
+    h1{
+        color: aliceblue;
+        max-width: 40%;
+        font-size: 50px;
+        font-family: 'Roboto', sans-serif;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-name: slidein;
+    }
+
+  @keyframes slidein {
+  from {
+    margin-left: -100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+    .mainCont{
+        max-height: 15%;
+        margin-top: 10%;
+        margin-left: 20%;
+    }
+
+    .litleTitle{
+      color: aliceblue;
+      margin-top: 15px;
+      max-width: 30%;
+      font-size: 25px;
+      font-family: 'Roboto', sans-serif;
+      animation-timing-function: linear;
+      animation-duration: 1s;
+      animation-name: slidein;
+    }
+    .decor{
+      text-decoration-line: underline;
+      text-decoration-color:#baf1ff;
+      text-underline-offset: 10px;
+      text-decoration-thickness: 4px;
+    }
+
+
+    .advantages{
+      margin-top: 10px;
+      border-radius: 22px;
+      font-family: 'Roboto', sans-serif;
+      max-width: 300px;
+      color: aliceblue;
+      display: flex;
+}
+.main-row-block {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 35px auto;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+    .textAdvent{
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+
+    .smallImg{
+      color: aliceblue;
+      filter: invert(100%); 
+      max-width: 60px;
+    }
+
+    .activeElem{
+      background-color: aliceblue;
+      width: 400px;
+      margin-left: 50%;
+      margin-top: 10%;
+      position: absolute;
+      border-radius: 10px;
+      padding: 20px;
+      z-index: 9;
+    }
+
+    .slidecontainer {
+    width: 100%;
+    margin-top: 30px;
+}
+    .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #a4bdff;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #302594;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #302594;
+    cursor: pointer;
+}
+.tabble{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form_radio {
+	margin-bottom: 10px;
+}
+button {
+  border-radius: 4px;
+  border: #302594;
+  margin-top: 10px;
+  color: #ffffff;
+  background: #302594;
+  padding: .375em 1.125em;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+button:active {
+  background: #302594;
+}
+
+button:hover {
+  background: #3325ac;
+}
+
+.form-radio-hidden{
+  display: flex;
+  flex-direction: row;
+  height: 28px;
+  position: relative;
+  align-items: center;
+}
+.form-radio-hidden input{
+  position: absolute;
+  opacity: 0;
+  display: block;
+  height: 0;
+  width: 0;
+}
+.form-radio-hidden .radio{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  margin-right: 5px;
+  border: 1px solid #999999;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+  transition: .5s all;
+}
+.form-radio-hidden:hover .radio{
+  background-color: #f9f9f9;
+  box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
+}
+.form-radio-hidden input:checked + .radio{
+  border-color: #555;
+  background-color: #f9f9f9;
+  box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
+  cursor: default;
+}
+.form-radio-hidden:hover .radio::before, .form-radio-hidden input:checked + .radio::before{
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #ddd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.form-radio-hidden input:checked + .radio::before{
+  background-color: #555;
+  box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.2);
+}
+.form-radio-hidden input + .radio + .text{
+  color: #777;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: sans-serif;
+  margin-right: 10px;
+  align-self: center;
+}
+.form-radio-hidden input:checked + .radio + .text{
+  color: #555;
+  cursor: default;
+}
+
+.container{
+  display: flex;
+}
+
