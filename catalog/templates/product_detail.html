@@ -35,8 +35,8 @@
       </div>
         <br><br><br>
     {% endfor %}
-  {% else %}  
-    <h3>Такого артикула не существует</h3>
+  {% else %}
+    <h2>Товар с данным артикулом не найден.</h2>
   {% endif %}
 </body>
 </html>
@@ -52,6 +52,12 @@
     color: #fafafa;
   }
 
+  h2{
+    margin-left: 10px;
+    color: aliceblue;
+    font-size: 45px;
+    font-family: 'Roboto', sans-serif;
+  }
 
     body {
         margin-left: auto;
